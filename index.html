@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Rota Certa – Aluguel e Venda de Carros</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">
+        <svg width="40" height="40" viewBox="0 0 100 100">
+          <polygon points="10,50 60,10 60,90" fill="#007bff"/>
+        </svg>
+        <span>Rota Certa</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#veiculos">Veículos</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contrato">Contrato</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="inicio" class="hero">
+    <div class="container">
+      <h1>Encontre e alugue o carro ideal para você</h1>
+      <form id="search-form" class="search-form">
+        <input type="text" id="search-text" placeholder="Marca ou modelo" />
+        <select id="search-type">
+          <option value="">Todos</option>
+          <option value="aluguel">Aluguel</option>
+          <option value="venda">Venda</option>
+        </select>
+        <button type="submit">Buscar</button>
+      </form>
+      <div class="slider-filter">
+        <label>Preço: R$ <span id="price-min">0</span> – R$ <span id="price-max">200000</span></label>
+        <input type="range" id="slider-min" min="0" max="200000" step="1000" value="0">
+        <input type="range" id="slider-max" min="0" max="200000" step="1000" value="200000">
+      </div>
+    </div>
+  </section>
+
+  <section id="veiculos" class="featured-cars container">
+    <h2>Veículos Disponíveis</h2>
+    <div id="car-list" class="car-grid"></div>
+  </section>
+
+  <section id="sobre" class="about container">
+    <h2>Sobre a Rota Certa</h2>
+    <p>Somos uma plataforma moderna que conecta você ao carro ideal, seja para alugar ou comprar — com transparência, segurança e uma experiência digital intuitiva.</p>
+  </section>
+
+  <section id="contrato" class="form-section container">
+    <h2>Gerar Contrato</h2>
+    <form id="form-contrato">
+      <input type="text" id="cliente-nome" placeholder="Nome completo" required/>
+      <input type="email" id="cliente-email" placeholder="E‑mail" required/>
+      <input type="tel" id="cliente-tel" placeholder="Telefone" required/>
+      <input type="text" id="contrato-veiculo" placeholder="Veículo" readonly required/>
+      <input type="date" id="contrato-data-inicio" required/>
+      <input type="date" id="contrato-data-fim" required/>
+      <button type="submit">Gerar Contrato</button>
+    </form>
+    <pre id="contrato-output"></pre>
+  </section>
+
+  <section id="contato" class="form-section container">
+    <h2>Fale Conosco</h2>
+    <form id="form-contato">
+      <input type="text" id="contato-nome" placeholder="Nome" required/>
+      <input type="email" id="contato-email" placeholder="E‑mail" required/>
+      <textarea id="contato-mensagem" placeholder="Mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="contato-resposta"></p>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Rota Certa – Todos os direitos reservados.</p>
+      <p><a href="#inicio">Voltar ao topo ↑</a></p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
